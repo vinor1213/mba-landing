@@ -421,12 +421,20 @@ export default function NewsDetailAnimated({ newsItem }: NewsDetailAnimatedProps
                                 href={`/news/${prevNews.slug}`}
                                 className="flex items-center gap-2 px-2 py-1 hover:-translate-x-1 transition-transform duration-300"
                             >
-                                <span className="text-gray-600 text-xl font-bold">&lt;</span>
+
                                 <img
                                     src={prevNews.image}
                                     alt={prevNews.title}
                                     className="w-16 h-16 object-cover rounded-lg"
                                 />
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    className="w-6 h-6 text-gray-600 rotate-180"
+                                >
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
                                 <div>
                                     <h3 className="text-gray-800  text-sm sm:text-base italic">{prevNews.title}</h3>
                                 </div>
@@ -442,12 +450,21 @@ export default function NewsDetailAnimated({ newsItem }: NewsDetailAnimatedProps
                                 <div className="text-right">
                                     <h3 className="text-gray-800  text-sm sm:text-base italic">{nextNews.title}</h3>
                                 </div>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    className="w-6 h-6 text-gray-600"
+                                >
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+
                                 <img
                                     src={nextNews.image}
                                     alt={nextNews.title}
                                     className="w-16 h-16 object-cover rounded-lg"
                                 />
-                                <span className="text-gray-600 text-xl font-bold">&gt;</span>
+
                             </a>
                         )}
                     </motion.div>

@@ -283,7 +283,7 @@ export default function EventsDetailAnimated({ eventItem, }: EventDetailProps) {
         </div>
 
 
-      
+
 
         <div className="flex flex-wrap items-center gap-2 mt-2 sm:mt-0">
           <span className="text-gray-500 font-medium mr-2">Share:</span>
@@ -546,12 +546,20 @@ export default function EventsDetailAnimated({ eventItem, }: EventDetailProps) {
               href={`/events/${prevEvent.slug}`}
               className="flex items-center gap-2 px-2 py-1 hover:-translate-x-1 transition-transform duration-300"
             >
-              <span className="text-gray-600 text-xl font-bold">&lt;</span>
+
               <img
                 src={prevEvent.image}
                 alt={prevEvent.title}
                 className="w-16 h-16 object-cover rounded-lg"
               />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-6 h-6 text-gray-600 rotate-180"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
               <div>
                 <h3 className="text-gray-800  text-sm sm:text-base italic">{prevEvent.title}</h3>
               </div>
@@ -567,12 +575,20 @@ export default function EventsDetailAnimated({ eventItem, }: EventDetailProps) {
               <div className="text-right">
                 <h3 className="text-gray-800 text-sm sm:text-base italic">{nextEvent.title}</h3>
               </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-6 h-6 text-gray-600"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
               <img
                 src={nextEvent.image}
                 alt={nextEvent.title}
                 className="w-16 h-16 object-cover rounded-lg"
               />
-              <span className="text-gray-600 text-xl font-bold">&gt;</span>
+
             </a>
           )}
         </motion.div>

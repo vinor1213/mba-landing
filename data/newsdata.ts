@@ -43,9 +43,9 @@ export const newsData = [
         Sona Alumni Concession
       </div>
       <ul class="list-disc pl-5 text-gray-600  space-y-1">
-        <li>Any 2 from Sona Group – ₹60,000</li>
-        <li>Any 1 from Sona Group – ₹50,000</li>
-        <li>Referred by Alumni – ₹75,000</li>
+        <li>Any 2 from Sona Institutions  – ₹60,000</li>
+        <li>Any 1 from Sona Institutions  – ₹50,000</li>
+        <li>Referred by Alumni Scholarship – ₹75,000</li>
       </ul>
     </div>
 
@@ -92,7 +92,8 @@ export const newsData = [
         </svg>
         Merit Ranking Scholarship
       </div>
-      <p class="text-gray-600 >Up to ₹75,000 based on academic excellence</p>
+  <p class="text-gray-600">Up to ₹75,000 based on academic excellence</p>
+
     </div>
 
     <div class="flex flex-col items-start gap-2 p-5 bg-white  shadow-md hover:shadow-lg border border-gray-100 transition">
@@ -128,6 +129,7 @@ export const newsData = [
       </div>
       <p class="text-gray-600 ">₹50,000 concession</p>
     </div>
+    
 
   </div>
 
@@ -140,37 +142,17 @@ export const newsData = [
   </p>
 
   <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-gray-800">
-    <!-- Contact -->
-    <div class="flex items-center gap-3 bg-white px-5 py-3 rounded-xl shadow-sm hover:shadow-md transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.29 3.868a1 1 0 01-.272 1.09l-2.12 2.12a16.001 16.001 0 006.364 6.364l2.12-2.12a1 1 0 011.09-.272l3.868 1.29a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-      </svg>
-      <p class="font-medium">9900016900</p>
-    </div>
+  <!-- Apply Online Button -->
+  <a 
+    href="https://www.sonabusinessschool.com/online-application?inst_id=ZFSQSGGCPYXQ9589" 
+    target="_blank" 
+    class="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-maroon text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
+  >
+  
+    Apply Online →
+  </a>
+</div>
 
-    <!-- Website -->
-    <div class="flex items-center gap-3 bg-white px-5 py-3 rounded-xl shadow-sm hover:shadow-md transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M12 4a8 8 0 108 8 8 8 0 00-8-8zM2 12h20M12 2v20" />
-      </svg>
-      <a href="https://www.sonabusinessschool.com" target="_blank" class="text-blue-600 hover:underline font-medium">
-        www.sonabusinessschool.com
-      </a>
-    </div>
-
-    <!-- Location -->
-    <div class="flex items-center gap-3 bg-white px-5 py-3 rounded-xl shadow-sm hover:shadow-md transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z" />
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M12 22s8-7.582 8-13a8 8 0 10-16 0c0 5.418 8 13 8 13z" />
-      </svg>
-      <p class="font-medium">Salem, Tamil Nadu</p>
-    </div>
-  </div>
 </div>
 
 </div>

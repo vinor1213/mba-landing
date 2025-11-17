@@ -55,7 +55,7 @@ export default function ScholarshipWidget() {
                                     className="text-yellow-500 flex-shrink-0"
                                 />
                                 <span className="relative font-semibold leading-tight">
-                                    Scholarships
+                                    Earlybird Scholarships
                                     <motion.span
                                         className="absolute left-0 bottom-[-3px] h-[2px] bg-yellow-500 rounded-full"
                                         initial={{ width: 0, opacity: 0 }}
@@ -80,12 +80,7 @@ export default function ScholarshipWidget() {
                                         className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-xl object-cover border border-white/20 flex-shrink-0"
                                     />
                                     <div className="flex-1 text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] leading-snug">
-                                        <Link
-                                            href={
-                                                "/news/scholarships-and-fee-concessions-2026-27/" as any
-                                            }
-                                            className="hover:underline hover:text-yellow-400 transition block"
-                                        >
+                                        <div>
                                             Exclusive scholarships for students with{" "}
                                             <span className="italic font-extrabold bg-gradient-to-r from-yellow-600 to-yellow-400 bg-clip-text text-transparent">
                                                 90%+
@@ -111,11 +106,18 @@ export default function ScholarshipWidget() {
                                                     <span className="text-yellow-400">
                                                         TANCET (<span className="italic font-bold">97%+</span>):
                                                     </span>{" "}
-                                                    90% Fee Waiver!
+                                                    90% Fee Waiver!{" "}
+                                                    <Link
+                                                        href="/news/scholarships-and-fee-concessions-2026-27"
+                                                        className="text-yellow-400 hover:underline transition text-xs"
+                                                    >
+                                                        Read More...
+                                                    </Link>
                                                 </p>
                                             </div>
-                                        </Link>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,5 @@
 export const eventsData = [
 
- 
   {
     id: 32,
     title: "MMA Session on Change Readiness",
@@ -43,7 +42,76 @@ export const eventsData = [
     showFront: true,
   },
 
+  {
+    id: 33,
+    title: "Sona Cricket Premier League (SCPL) 2026",
+    slug: "sona-cricket-premier-league-2026",
+    excerpt:
+      "Get ready for the ultimate cricket showdown! Witness thrilling matches, team spirit, and celebration at the Sona Cricket Premier League (SCPL) 2026.",
+    description:
+      "The Sona School of Business & Management proudly presents the Sona Cricket Premier League (SCPL) 2025 — a two-day cricket extravaganza filled with excitement, energy, and sportsmanship. Students will battle it out on the field, showcasing teamwork, talent, and leadership. Join us to celebrate passion, performance, and pure cricketing fun!",
+    content: `<div class="news-article mx-auto leading-relaxed">
+  <div class="flex items-center gap-2 mb-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-yellow-600">
+      <path d="M2 21l14-14 3 3-14 14H2v-3zM19.7 6.3l2-2a1 1 0 00-1.4-1.4l-2 2 1.4 1.4z"/>
+    </svg>
+    <h2 class="text-xl font-semibold">Get Ready for the Sona Cricket Premier League (SCPL) 2026</h2>
+  </div>
 
+  <p>The most awaited cricket event of the year is here, celebrating teamwork, strategy, and sportsmanship at its best.</p>
+  <p>Gear up as our students take the field to showcase their <span class="italic">team spirit, talent, and sportsmanship!</span></p>
+
+  <!-- Event Details & Highlights side-by-side -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+    <!-- Left: Event Details -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Event Details</h3>
+      <ul class="list-disc pl-6 space-y-1 text-justify">
+        <li><strong>Date:</strong> 29.01.2026 & 30.01.2026</li>
+        <li><strong>Venue:</strong> Sona Playground</li>
+        <li><strong>Organized by:</strong> Sona School of Business & Management</li>
+      </ul>
+    </div>
+
+    <!-- Right: Highlights -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Highlights</h3>
+      <ul class="list-disc pl-6 space-y-1 text-justify">
+        <li>Thrilling matches between student teams</li>
+        <li>Awards for Best Batsman, Bowler & All-Rounder</li>
+        <li>Music, crowd energy, and celebration throughout</li>
+        <li>Supported by our sponsors and organizing committee</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer note -->
+  <div class="mt-8 flex flex-col md:flex-row justify-between gap-6">
+    <!-- Cheer Section -->
+    <div class="flex items-start gap-2 flex-1">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1">
+        <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/>
+      </svg>
+      <p>Let’s come together and cheer for our favorite teams!</p>
+    </div>
+
+    <!-- Stay Tuned Section -->
+    <div class="flex items-start gap-2 flex-1">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1">
+        <path d="M12 18a2 2 0 112 2 2 2 0 01-2-2zm0-16a9.985 9.985 0 019.95 9H20a8 8 0 10-16 0H2.05A9.985 9.985 0 0112 2zm0 4a6 6 0 016 6h-2a4 4 0 00-8 0H6a6 6 0 016-6z"/>
+      </svg>
+      <p>Stay tuned for live updates, highlights, and behind-the-scenes moments!</p>
+    </div>
+  </div>
+</div>`,
+
+    date: "2026-01-29",
+    enddate: "2026-01-30",
+    category: "Sports & Recreation",
+    image: "/images/event-images/thumbnail-IPL-Comming-Soon-Poster.webp",
+
+    showFront: true,
+  },
 
   {
     id: 31,
@@ -642,52 +710,7 @@ export const eventsData = [
     ],
     showFront: false,
   },
-  //   {
-  //     id: 15,
-  //     title: "Thoppur Ghat Highway Project Gains Momentum with a sanction of ₹905 crore",
-  //     slug: "thoppur-ghat-highway-project-905-crore",
-  //     excerpt: "SSBM’s research on Thoppur Ghat road accidents led to actionable recommendations and contributed to the sanction of ₹905 crore for an elevated highway project.",
-  //     description: "Sona School of Business and Management conducted an in-depth study on accidents at Thoppur Ghat, presenting key insights to officials, which influenced the government to sanction ₹905 crore for a safer elevated highway.",
-  //     content: `<div class="news-article mx-auto">
 
-  //   <p class="mb-4">The Sona School of Business and Management (SSBM) has played a pivotal role in driving real-world change through research and advocacy focused on reducing road accidents in one of Tamil Nadu’s most dangerous stretches—the Thoppur Ghat Section.</p>
-
-  //   <p class="mb-4">As part of a socially responsible initiative, SBM conducted a comprehensive analysis titled <strong>"Road Accidents in Thoppur"</strong>, presented to key stakeholders including the Deputy Superintendent of Police – Thoppur, Inspector of Police, Regional Transport Officers, Deputy Transport Commissioner, and L&T Toll Management officials. The report analyzed 10 years of accident data, offering insights into accident patterns, contributing factors, and prevention strategies.</p>
-
-  //   <h3 class="text-xl font-semibold mt-6 mb-2">Research Highlights and Insights</h3>
-  //   <ul class="list-disc pl-6 mb-4 space-y-2">
-  //     <li>473 accidents occurred within a 3 KM stretch of the Thoppur Ghat section.</li>
-  //     <li>1 in every 4 accident injuries resulted in death, reflecting the severity.</li>
-  //     <li>Weekends saw higher accident rates due to traffic and drunk driving.</li>
-  //     <li>Vehicle design, especially high center of gravity, contributed to rollover risks.</li>
-  //     <li>A dedicated two-wheeler lane was recommended to reduce mixed traffic collisions.</li>
-  //     <li>High penalties for accident-prone zones were suggested to improve discipline.</li>
-  //     <li>About 30% of accidents occurred on full moon or new moon days, indicating a need for scientific review.</li>
-  //     <li>Other causes included poor road maintenance, sharp turns, and mechanical faults in recently repaired vehicles.</li>
-  //   </ul>
-
-  //   <h3 class="text-xl font-semibold mt-6 mb-2">From Research to Recognition and Action</h3>
-  //   <p class="mb-4">The report was refined and retitled <strong>"Towards Zero Accidents at Thoppur Ghat Section"</strong> and presented to District Collector Tmt. D. Divyadharshini, who praised it as “an impressive work.” Several actionable proposals were derived, many now being explored or implemented by local authorities.</p>
-
-  //   <h3 class="text-xl font-semibold mt-6 mb-2">A Major Milestone: Elevated Highway Project Sanctioned</h3>
-  //   <p class="mb-4">Aligned with the report’s recommendations, the Central Government sanctioned ₹905 crore for constructing an elevated highway in Thoppur. This infrastructure upgrade aims to ease congestion, reduce fatal crashes, and create a safer corridor for all commuters.</p>
-
-  //   <h3 class="text-xl font-semibold mt-6 mb-2">Driving Impact Beyond the Classroom</h3>
-  //   <p class="mb-4">At SSBM, we believe in research with purpose. Our commitment to public safety, governance collaboration, and community welfare demonstrates our vision of education that creates real-world impact. We are proud to contribute toward safer roads, smarter infrastructure, and stronger communities.</p>
-
-  // </div>`,
-  //     date: "2025-05-12",
-  //     startTime: "10:00 AM",
-  //     endTime: "04:00 PM",
-  //     category: "Campus Life",
-  //     image: "/images/event-images/thoppur-ghat-road-safety-initiative.webp",
-  //     gallery: [
-  //       "/images/event-images/thoppur-ghat-road-safety-initiative-1.webp",
-  //       "/images/event-images/thoppur-ghat-road-safety-initiative-2.webp",
-  //       "/images/event-images/thoppur-ghat-road-safety-initiative-3.webp"
-  //     ],
-  //     showFront: true,
-  //   },
   {
     id: 16,
     title: "Faculty Development Program on Research Writing",
@@ -1564,6 +1587,7 @@ export const eventsData = [
     image: "/images/about/OUTLOOK-Magazine-Article.jpg",
     showFront: false,
   },
+
 
 
 

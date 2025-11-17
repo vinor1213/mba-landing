@@ -175,6 +175,14 @@ export default function Hero() {
 
                     <li>
                       <Link
+                        href="/events/sona-cricket-premier-league-2026"
+                        className="hover:underline hover:text-yellow-400 transition cursor-pointer"
+                      >
+                        Sona Cricket Premier League - 2026
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
                         href="/events/cii-skills-summit-2025"
                         className="hover:underline hover:text-yellow-400 transition cursor-pointer"
                       >
