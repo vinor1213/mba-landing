@@ -151,8 +151,17 @@ export default function OutlookPage() {
           <span className="font-semibold text-[#0b3370]">9<sup>th</sup> in Tamil Nadu</span> by{" "}
           <span className="font-semibold">Outlook MBA Rankings</span>. With{" "}
           <span className="font-semibold text-[#0b3370]">98% placements</span> and strong industry
-          partnerships, we deliver future-ready management education.
+          partnerships, we deliver future-ready management education.{" "}
+          {/* <Link href="/why-choose-sona" className="relative font-semibold italic group">
+            <span className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 bg-clip-text text-transparent">
+              Read more...
+            </span>
+  
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 transition-all duration-300 group-hover:w-full"></span>
+          </Link> */}
+
         </motion.p>
+
       </motion.div>
 
       {/* Stats */}
@@ -271,7 +280,7 @@ export default function OutlookPage() {
             <div className="p-6 sm:p-8 mt-auto">
               <div className="h-px bg-gray-100 mb-5"></div>
               <Link
-                href="#admissions"
+                href="/jef"
                 className="block text-center text-maroon font-medium py-3 px-6 rounded-lg transition-all duration-300 bg-gradient-to-r from-yellow-500 to-yellow-300 hover:from-yellow-600 hover:to-yellow-400 text-base md:text-lg"
               >
                 Explore JEF →

@@ -939,7 +939,7 @@ The campus accommodation is well connected with Wi-Fi, Unique State-of-the-art A
                     <span>
                       <a href="tel:9900016900"> 9900016900</a> /
                       <a href="tel:94896000283"> 94896000283</a>
-                     
+
                     </span>
                   </div>
 

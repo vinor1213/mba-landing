@@ -14,12 +14,12 @@ import {
 
 // Program list
 const programs = [
-  { title: "Finance", icon: <FaChartLine size={40} className="text-white" /> },
-  { title: "Marketing", icon: <FaLightbulb size={40} className="text-white" /> },
-  { title: "Human Resources", icon: <FaBriefcase size={40} className="text-white" /> },
-  { title: "Family Business", icon: <FaGlobe size={40} className="text-white" /> },
-  { title: "Business Analytics", icon: <FaDatabase size={40} className="text-white" /> },
-  { title: "Production", icon: <FaCogs size={40} className="text-white" /> },
+  { title: "Finance", icon: <FaChartLine size={40} className="text-white" />, href: "/specialization/?tab=finance" },
+  { title: "Marketing", icon: <FaLightbulb size={40} className="text-white" />, href: "/specialization/?tab=marketing" },
+  { title: "Human Resources", icon: <FaBriefcase size={40} className="text-white" />, href: "/specialization/?tab=hr" },
+  { title: "Family Business", icon: <FaGlobe size={40} className="text-white" />, },
+  { title: "Business Analytics", icon: <FaDatabase size={40} className="text-white" />, href: "/specialization/?tab=businessanalytics" },
+  { title: "Production", icon: <FaCogs size={40} className="text-white" />, },
 ];
 
 // ✅ Strictly typed variants
@@ -78,21 +78,48 @@ export default function Programs() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              {programs.map((p, i) => (
-                <motion.div
-                  key={p.title}
-                  className="flex flex-col items-center justify-center p-4 bg-maroon rounded-xl cursor-pointer shadow-lg hover:shadow-2xl"
-                  variants={cardVariants}
-                  custom={i}
-                  whileHover="hover"
-                >
-                  {p.icon}
-                  <h3 className="mt-2 text-xs sm:text-sm font-medium text-white text-center">
-                    {p.title}
-                  </h3>
-                </motion.div>
-              ))}
+              {programs.map((p, i) => {
+                const CardContent = (
+                  <motion.div
+                    className="flex flex-col items-center justify-center p-4 bg-maroon rounded-xl cursor-pointer shadow-lg hover:shadow-2xl transition-transform duration-300"
+                    variants={cardVariants}
+                    custom={i}
+                    whileHover="hover"
+                  >
+                    {p.icon}
+                    <h3 className="mt-2 text-xs sm:text-sm font-medium text-white text-center">
+                      {p.title}
+                    </h3>
+                  </motion.div>
+                );
+
+                if (p.href) {
+                  // Internal link
+                  if (p.href.startsWith("/")) {
+                    return (
+                      <Link key={p.title} href={p.href as any}>
+                        {CardContent}
+                      </Link>
+                    );
+                  }
+                  // External link
+                  return (
+                    <a
+                      key={p.title}
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {CardContent}
+                    </a>
+                  );
+                }
+
+                // No link
+                return <div key={p.title}>{CardContent}</div>;
+              })}
             </motion.div>
+
           </motion.div>
 
           {/* Right: Image with button */}
