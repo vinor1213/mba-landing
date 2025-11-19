@@ -18,7 +18,7 @@ interface EventItem {
   description: string;
   image: string;
   slug: string;
-  showFront: boolean;
+  showFront?: boolean;
 }
 
 interface NewsItem {
@@ -27,24 +27,17 @@ interface NewsItem {
   description: string;
   image: string;
   slug: string;
-  showFront: boolean;
+  showFront?: boolean;
 }
 
 const MotionLink = motion(Link);
 
 const tabTypes = ["News", "Events", "Upcoming"] as const;
 
-const repeatToFill = (items: any[], minCount: number) => {
-  if (!items.length) return [];
-  let repeated: any[] = [];
-  while (repeated.length < minCount) {
-    repeated = [...repeated, ...items];
-  }
-  return repeated;
-};
-
 export default function NewsEvents() {
-  const [activeTab, setActiveTab] = useState<"News" | "Events" | "Upcoming">("News");
+  const [activeTab, setActiveTab] = useState<"News" | "Events" | "Upcoming">(
+    "News"
+  );
 
   const today = new Date();
 
@@ -58,13 +51,13 @@ export default function NewsEvents() {
     }
 
     if (activeTab === "Events") {
-      return eventsData.filter(
-        (e) => e.showFront && new Date(e.date) <= today
-      );
+      return eventsData.filter((e) => e.showFront && new Date(e.date) <= today);
     }
 
     return [];
   };
+
+  const items = filteredItems();
 
   const renderCard = (item: NewsItem | EventItem, i: number) => {
     const dateObj = new Date(item.date);
@@ -72,7 +65,6 @@ export default function NewsEvents() {
     const month = dateObj.toLocaleString("en-US", { month: "short" });
     const year = dateObj.getFullYear();
 
-    // Determine link
     const href = newsData.includes(item as any)
       ? `/news/${item.slug}`
       : `/events/${item.slug}`;
@@ -100,7 +92,9 @@ export default function NewsEvents() {
                 <h3 className="font-semibold text-gray-800 text-sm sm:text-base mb-1 line-clamp-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-xs sm:text-sm line-clamp-3">{item.description}</p>
+                <p className="text-gray-600 text-xs sm:text-sm line-clamp-3">
+                  {item.description}
+                </p>
               </div>
             </div>
           </motion.div>
@@ -147,27 +141,28 @@ export default function NewsEvents() {
           ))}
         </div>
 
-        {/* Check if there are items */}
-        {filteredItems().length > 0 ? (
+        {/* If items exist */}
+        {items.length > 0 ? (
           <>
-            {/* Swiper */}
             <Swiper
               modules={[Pagination, Autoplay]}
               spaceBetween={16}
               slidesPerView={1}
-              centeredSlides={true}
-              loop
-              autoplay={{ delay: 2800, disableOnInteraction: false, pauseOnMouseEnter: true }}
+              centeredSlides={items.length === 1}
+              loop={items.length > 1}
+              autoplay={{
+                delay: 2800,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
               pagination={{ clickable: true }}
               breakpoints={{
-                0: { slidesPerView: 1, centeredSlides: true },
-                480: { slidesPerView: 1, centeredSlides: true },
-                640: { slidesPerView: 2, centeredSlides: false },
-                1024: { slidesPerView: 3, centeredSlides: false },
+                640: { slidesPerView: Math.min(items.length, 2) },
+                1024: { slidesPerView: Math.min(items.length, 3) },
               }}
               className="custom-swiper pb-12"
             >
-              {repeatToFill(filteredItems(), 6).map((item, i) => renderCard(item, i))}
+              {items.map((item, i) => renderCard(item, i))}
             </Swiper>
 
             {/* Button */}
@@ -202,31 +197,27 @@ export default function NewsEvents() {
             </AnimatePresence>
           </>
         ) : (
-          // No events fallback
           <div className="flex justify-center items-center mt-12">
-            <p className="text-lg font-semibold text-gray-200">
-              No events available
-            </p>
+            <p className="text-lg font-semibold text-gray-200">No events available</p>
           </div>
         )}
       </div>
 
       <style jsx global>{`
-    .custom-swiper .swiper-pagination-bullet {
-      background: #ddd !important;
-      opacity: 1 !important;
-    }
-    .custom-swiper .swiper-pagination-bullet-active {
-      background: #ffcc00 !important;
-    }
-    @media (max-width: 640px) {
-      .custom-swiper .swiper-slide > div {
-        width: 90%;
-        margin: 0 auto;
-      }
-    }
-  `}</style>
+        .custom-swiper .swiper-pagination-bullet {
+          background: #ddd !important;
+          opacity: 1 !important;
+        }
+        .custom-swiper .swiper-pagination-bullet-active {
+          background: #ffcc00 !important;
+        }
+        @media (max-width: 640px) {
+          .custom-swiper .swiper-slide > div {
+            width: 90%;
+            margin: 0 auto;
+          }
+        }
+      `}</style>
     </section>
-
   );
 }

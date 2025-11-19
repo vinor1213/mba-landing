@@ -21,7 +21,7 @@ import {
     MdVerified,
     MdBusiness,
     MdCurrencyRupee,
-    MdPublic
+
 } from "react-icons/md";
 
 export default function SpecializationPageContent() {
@@ -236,7 +236,7 @@ export default function SpecializationPageContent() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="relative bg-white p-6 md:p-10 rounded-3xl max-w-7xl mx-auto shadow-xl overflow-hidden"
+                            className="relative bg-white p-6 md:p-10 rounded-3xl max-w-7xl mx-auto  overflow-hidden"
                         >
                             {/* Hero Header */}
                             <motion.div
@@ -381,7 +381,153 @@ export default function SpecializationPageContent() {
 
                             </motion.div>
 
+                            <motion.div
 
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                {/* Center Heading */}
+                                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+                                    Club Activities
+                                </h3>
+
+                                <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6 text-center ">
+                                    Designed to build creativity, customer understanding, and market intelligence.
+                                </p>
+
+                                {/* Activities */}
+
+
+                                {/* Outcomes + Image side-by-side */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10 items-start">
+
+                                    {/* Activities */}
+                                    <div>
+
+
+                                        <div className="space-y-4">
+                                            {[
+                                                {
+                                                    title: "Bazar (Marketing Fair)",
+                                                    desc: "Students create, market, and sell products to understand real customer behavior."
+                                                },
+                                                {
+                                                    title: "Brand-Selling Activitie",
+                                                    desc: "Practical selling and persuasion activities"
+                                                },
+                                                {
+                                                    title: "Marketing Workshop",
+                                                    desc: "Sessions by industry experts on branding, digital marketing, and consumer insight"
+                                                }
+                                            ].map((item, i) => (
+                                                <motion.div
+                                                    key={i}
+                                                    className="flex items-start gap-3"
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                                >
+                                                    <DiamondStar className="text-maroon/70 h-5 w-5 mt-1 flex-shrink-0" />
+
+                                                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                                        <span className="text-maroon font-medium">{item.title}</span>
+                                                        {" – "}
+                                                        {item.desc}
+                                                    </p>
+
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Outcomes */}
+                                    <div>
+                                        <h4 className="text-xl font-semibold text-gray-800 mb-4">Outcomes</h4>
+
+                                        <div className="space-y-4">
+                                            {[
+                                                "Ability to design and execute marketing strategies through hands-on activities.",
+                                                "Improved persuasion, selling, and customer-interaction skills.",
+                                                "Enhanced creativity in branding and promotional planning",
+                                                "Practical exposure to market analysis and consumer behaviour."
+                                            ].map((item, i) => (
+                                                <motion.div
+                                                    key={i}
+                                                    className="flex items-start gap-3"
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                                >
+                                                    <DiamondStar className="text-maroon/70 h-5 w-5 mt-1 flex-shrink-0" />
+
+                                                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                                        {item}
+                                                    </p>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                </div>
+                                {/* Two Images Section */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.7 }}
+                                    className="mt-14"
+                                >
+                                    {/* Center Title */}
+                                    <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">
+                                        Branding-selling activities
+                                    </h2>
+
+                                    {/* Two Images Side-by-Side */}
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+                                        {/* Image 1 */}
+                                        <motion.div
+                                            initial={{ opacity: 0, x: -40 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.6 }}
+                                            className="flex justify-center"
+                                        >
+                                            <div className="rounded-xl overflow-hidden  border border-gray-200 transition-all duration-300">
+                                                <img
+                                                    src="/images/specilization/club/marketing-1.png"
+                                                    alt="Marketing Bazaar"
+                                                    className="w-full md:w-[420px] object-cover hover:scale-105 transition-transform duration-500"
+                                                />
+                                            </div>
+                                        </motion.div>
+
+                                        {/* Image 2 */}
+                                        <motion.div
+                                            initial={{ opacity: 0, x: 40 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.6 }}
+                                            className="flex justify-center"
+                                        >
+                                            <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300">
+                                                <img
+                                                    src="/images/specilization/club/marketing-2.png"
+                                                    alt="Brand Selling"
+                                                    className="w-full md:w-[420px] object-cover hover:scale-105 transition-transform duration-500"
+                                                />
+                                            </div>
+                                        </motion.div>
+
+                                    </div>
+
+                                </motion.div>
+
+                            </motion.div>
 
                         </motion.section>
                     )}
@@ -393,7 +539,7 @@ export default function SpecializationPageContent() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -40 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="relative max-w-7xl mx-auto p-6 md:p-12 bg-white rounded-3xl shadow-xl overflow-hidden"
+                            className="relative max-w-7xl mx-auto p-6 md:p-12 bg-white rounded-2xl  overflow-hidden"
                         >
                             {/* Hero */}
                             <motion.div
@@ -442,7 +588,7 @@ export default function SpecializationPageContent() {
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: i * 0.1 }}
                                         >
-                                            <span className="text-maroon text-xl mt-1">✔️</span>
+                                            <span className="text-green-500 text-xl">✔︎</span>
                                             <p className="text-gray-700 text-sm md:text-base">{item}</p>
                                         </motion.div>
                                     ))}
@@ -559,6 +705,106 @@ export default function SpecializationPageContent() {
                                 </a>
 
                             </motion.div>
+
+
+
+
+                            <motion.div
+
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                {/* Center Heading */}
+                                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+                                    Club Activities
+                                </h3>
+
+                                <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6 text-center ">
+                                    Enhances financial decision-making and analytical skills
+                                </p>
+
+                                {/* Activities */}
+
+
+                                {/* Outcomes + Image side-by-side */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10 items-start">
+
+                                    {/* Activities */}
+                                    <div>
+
+
+                                        <div className="space-y-4">
+                                            {[
+                                                {
+                                                    title: "Stock Analysis Workshops",
+                                                    desc: "Understanding market movements and investment decision-making."
+                                                },
+                                                {
+                                                    title: "Budget Discussions",
+                                                    desc: "Hands-on budgeting and cost-control exercises."
+                                                },
+                                                {
+                                                    title: "Finance Quiz Competitions",
+                                                    desc: "Tests on financial concepts, markets, and applications."
+                                                }
+                                            ].map((item, i) => (
+                                                <motion.div
+                                                    key={i}
+                                                    className="flex items-start gap-3"
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                                >
+                                                    <DiamondStar className="text-maroon/70 h-5 w-5 mt-1 flex-shrink-0" />
+
+                                                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                                        <span className="text-maroon font-medium">{item.title}</span>
+                                                        {" – "}
+                                                        {item.desc}
+                                                    </p>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Outcomes */}
+                                    <div>
+                                        <h4 className="text-xl font-semibold text-gray-800 mb-4">Outcomes</h4>
+
+                                        <div className="space-y-4">
+                                            {[
+                                                "Improved financial literacy and analytical skills in stock market and budgeting.",
+                                                "Ability to interpret financial data and make informed decisions.",
+                                                "Strengthened problem-solving skills through quizzes and discussions.",
+                                                "Better understanding of capital markets, risk, and investment strategies."
+                                            ].map((item, i) => (
+                                                <motion.div
+                                                    key={i}
+                                                    className="flex items-start gap-3"
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                                >
+                                                    <DiamondStar className="text-maroon/70 h-5 w-5 mt-1 flex-shrink-0" />
+
+                                                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                                        {item}
+                                                    </p>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </motion.div>
+
+
+
                         </motion.section>
                     )}
 
@@ -570,7 +816,7 @@ export default function SpecializationPageContent() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -40 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="relative bg-white rounded-3xl p-6 md:p-14 max-w-7xl mx-auto shadow-xl overflow-hidden"
+                            className="relative bg-white rounded-3xl p-6 md:p-14 max-w-7xl mx-auto overflow-hidden"
                         >
                             {/* Hero Header */}
                             <motion.div
@@ -688,6 +934,7 @@ export default function SpecializationPageContent() {
                                     transition={{ duration: 0.6 }}
                                 >
                                     <h3 className="text-2xl font-semibold text-gray-800 mb-6">Career Opportunities</h3>
+
                                     {[
                                         { title: "Business Analyst", icon: <MdBusiness className="text-maroon/70 h-5 w-5" /> },
                                         { title: "Data Analyst", icon: <MdDataUsage className="text-maroon/70 h-5 w-5" /> },
@@ -706,16 +953,23 @@ export default function SpecializationPageContent() {
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: i * 0.1 }}
                                         >
-                                            <div className="absolute -left-4 top-1 flex items-center justify-center">
-
+                                            {/* ICON HERE */}
+                                            <div className="absolute -left-5 top-1">
+                                                {item.icon}
                                             </div>
-                                            <p className="text-gray-700 text-sm md:text-base pl-8">{item.title}</p>
+
+                                            <p className="text-gray-700 text-sm md:text-base pl-2">
+                                                {item.title}
+                                            </p>
                                         </motion.div>
                                     ))}
+
                                     <p className="text-gray-700 mt-4">
-                                        Organizations across <span className="font-semibold text-maroon">IT, BFSI, e-commerce, consulting, healthcare, and manufacturing</span> actively hire analytics professionals.
+                                        Organizations across <span className="font-semibold text-maroon">IT, BFSI, e-commerce, consulting, healthcare, and manufacturing</span>
+                                        actively hire analytics professionals.
                                     </p>
                                 </motion.div>
+
 
                                 {/* Why Choose MBA */}
                                 <motion.div
@@ -798,6 +1052,103 @@ export default function SpecializationPageContent() {
 
                             </motion.div>
 
+
+                            <motion.div
+
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                {/* Center Heading */}
+                                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+                                    Club Activities
+                                </h3>
+
+                                <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6 text-center ">
+                                    Promotes data-driven thinking and analytical competency.
+                                </p>
+
+                                {/* Activities */}
+
+
+                                {/* Outcomes + Image side-by-side */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10 items-start">
+
+                                    {/* Activities */}
+                                    <div>
+
+
+                                        <div className="space-y-4 ">
+                                            {[
+                                                {
+                                                    title: "Hackathons",
+                                                    desc: "Real-world data problem-solving challenges"
+                                                },
+                                                {
+                                                    title: "Decision-Making Activities",
+                                                    desc: "Using analytics to improve managerial decision-making"
+                                                },
+                                                {
+                                                    title: "Analytics Quiz ",
+                                                    desc: "Tests on data tools, trends, and business intelligence."
+                                                }
+                                            ].map((item, i) => (
+                                                <motion.div
+                                                    key={i}
+                                                    className="flex items-start gap-3 "
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                                >
+                                                    <DiamondStar className="text-maroon/70 h-5 w-5 mt-1 flex-shrink-0" />
+
+                                                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                                        <span className="text-maroon font-medium">{item.title}</span>
+                                                        {" – "}
+                                                        {item.desc}
+                                                    </p>
+
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Outcomes */}
+                                    <div>
+                                        <h4 className="text-xl font-semibold text-gray-800 mb-4">Outcomes</h4>
+
+                                        <div className="space-y-4">
+                                            {[
+                                                "Ability to work with real data for informed decision-making",
+                                                "Enhanced competency in analytical tools and problem-solving techniques",
+                                                "Development of structured thinking through hackathons and analytics challenges.",
+                                                "Improved interpretation and communication of data-driven insights."
+                                            ].map((item, i) => (
+                                                <motion.div
+                                                    key={i}
+                                                    className="flex items-start gap-3"
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                                >
+                                                    <DiamondStar className="text-maroon/70 h-5 w-5 mt-1 flex-shrink-0" />
+
+                                                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                                        {item}
+                                                    </p>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </motion.div>
+
                         </motion.section>
                     )}
 
@@ -871,6 +1222,102 @@ export default function SpecializationPageContent() {
                                         Apply Now
                                     </motion.button>
                                 </a>
+
+                            </motion.div>
+
+                            <motion.div
+
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                {/* Center Heading */}
+                                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+                                    Club Activities
+                                </h3>
+
+                                <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6 text-center ">
+                                    Focused on developing people-management skills, the HR Club offers:
+                                </p>
+
+                                {/* Activities */}
+
+
+                                {/* Outcomes + Image side-by-side */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10 items-start">
+
+                                    {/* Activities */}
+                                    <div>
+
+
+                                        <div className="space-y-4">
+                                            {[
+                                                {
+                                                    title: "Payroll Workshop",
+                                                    desc: "Hands-on sessions on payroll processing and compliance"
+                                                },
+                                                {
+                                                    title: "Team-Building Activitie",
+                                                    desc: "Interactive exercises to strengthen leadership and collaboration"
+                                                },
+                                                {
+                                                    title: "HR Simulation Games",
+                                                    desc: "Real-time decision-making activities based on workplace situations"
+                                                }
+                                            ].map((item, i) => (
+                                                <motion.div
+                                                    key={i}
+                                                    className="flex items-start gap-3"
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                                >
+                                                    <DiamondStar className="text-maroon/70 h-5 w-5 mt-1 flex-shrink-0" />
+
+                                                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                                        <span className="text-maroon font-medium">{item.title}</span>
+                                                        {" – "}
+                                                        {item.desc}
+                                                    </p>
+
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Outcomes */}
+                                    <div>
+                                        <h4 className="text-xl font-semibold text-gray-800 mb-4">Outcomes</h4>
+
+                                        <div className="space-y-4">
+                                            {[
+                                                "Students gain practical knowledge of payroll management and HR operations.",
+                                                "Enhanced ability to handle team dynamics and resolve people-related issues.",
+                                                "Improved decision-making skills through real-time HR simulation activities",
+                                                "Better understanding of employee engagement and organizational behavior."
+                                            ].map((item, i) => (
+                                                <motion.div
+                                                    key={i}
+                                                    className="flex items-start gap-3"
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                                >
+                                                    <DiamondStar className="text-maroon/70 h-5 w-5 mt-1 flex-shrink-0" />
+
+                                                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                                        {item}
+                                                    </p>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                </div>
+
 
                             </motion.div>
                         </motion.section>
